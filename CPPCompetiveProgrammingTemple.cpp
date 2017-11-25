@@ -30,6 +30,8 @@ priority_queue< ll, vector<ll>, greater<ll> > heap;
 
 int main()
 {
+	// freopen("input", "r", stdin);
+	// freopen("output", "w", stdout);
     cout << "Hello world!" << endl;
     return 0;
 }
