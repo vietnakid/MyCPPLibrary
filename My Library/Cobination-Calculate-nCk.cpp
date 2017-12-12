@@ -12,10 +12,12 @@ typedef pair<int, int> ii;
 typedef vector<ii> vii;
 typedef set<int> si;
 
-#define FOR(i, a, b) \
+#define REP(i, a, b) \
     for (int i = (a); i < (b); i++)
-#define FORE(i, a, b) \
-    for (int i = (a); i <= (b); i++)
+#define TRvi(c, it) \
+    for (vi::iterator it = (c).begin(); it != (c).end(); it++)
+#define TRvii(c, it) \
+    for (vii::iterator it = (c).begin(); it != (c).end(); it++)
 
 #define INF 2000000000 // 2e9
 #define INFLL 2000000000000000000 // 2e18
@@ -27,12 +29,23 @@ inline ll LCM(ll a, ll b) {return (a / GCD(a,b)) * b;};
 
 priority_queue< ll, vector<ll>, greater<ll> > heap;
 
+const int nMAX = 501;
+
+ll C[nMAX][nMAX];
+ll mod = 1e9+7;
+
+void init() {
+	C[0][0] = 1;
+    REP(i,1,nMAX){
+        C[i][0] = C[i][i] = 1;
+        REP(j,1,i) C[i][j] = (C[i-1][j] + C[i-1][j-1]) % mod;
+    }
+}
+
 int main()
 {
-	ios_base::sync_with_stdio(false);
-	cin.tie();
 	// freopen("input", "r", stdin);
 	// freopen("output", "w", stdout);
-    cout << "Hello world!" << endl;
+    init();
     return 0;
 }
