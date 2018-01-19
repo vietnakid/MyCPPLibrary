@@ -17,9 +17,9 @@ typedef set<int> si;
 #define FORE(i, a, b) \
     for (int i = (a); i <= (b); i++)
 
-#define INF 2000000000 // 2e9
-#define INFLL 2000000000000000000 // 2e18
-#define esp 0.0000000001
+#define INF 2e9 // 2e9
+#define INFLL 2e18 // 2e18
+#define esp 1e-9
 #define PI 3.14159265
 
 inline ll GCD(ll a, ll b) {while (b != 0) {ll c = a % b; a = b; b = c;} return a;};
